@@ -8,7 +8,7 @@ const AppConfig = {
     root: path.resolve(__dirname),
     src: path.resolve(__dirname, 'src'), // dir for source filed to compile
     build: path.resolve(__dirname, 'build'), // dir to output development build (in memory)
-    dist: path.resolve(__dirname, 'docs'), // dir to output production build
+    dist: path.resolve(__dirname, 'dist'), // dir to output production build
   },
   entries: {
     main: path.resolve(__dirname, 'src/main.js'),
@@ -16,4 +16,3 @@ const AppConfig = {
 };
 
 export default AppConfig;
-
