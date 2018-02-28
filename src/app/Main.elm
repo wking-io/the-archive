@@ -1,8 +1,20 @@
 module Main exposing (main)
 
-import Html exposing (h1, text)
+import Html exposing (Html, program)
+import Model exposing (..)
+import Page.Home as Home
 
 
-main : Html.Html msg
+main : Program Never Model msg
 main =
-    h1 [] [ text "It's working!" ]
+    program
+        { init = ( initialModel, Cmd.none )
+        , view = view
+        , update = \msg model -> ( model, Cmd.none )
+        , subscriptions = \model -> Sub.none
+        }
+
+
+view : Model -> Html msg
+view model =
+    Home.view model.user.name
